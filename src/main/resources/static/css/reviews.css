@@ -1,0 +1,97 @@
+html {
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-top: 0.5em;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    max-width: 1000px;
+    margin-top: 0.5em;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.7fr 10fr 0.5fr;
+    gap: 1px 1px;
+    grid-template-areas: "navbar navbar" "title title" "main main" "footer footer";
+}
+
+.navbar { grid-area: navbar; }
+
+.title { grid-area: title; }
+
+.main { grid-area: main; }
+
+.footer { grid-area: footer; }
+
+img {
+    display: block;
+    top: 100%;
+    left: 100%;
+    width: 1000px;
+    height: auto;
+    padding: 0.5em;
+    background-color: #1616c9;
+}
+
+
+
+p {
+    padding: 1em;
+    background-color: blue;
+    size: 14px;
+    display: inline-block;
+    max-width: 1000px;
+}
+
+h1 {
+    padding: 1em;
+    color: black;
+    size: 24px;
+    display: inline-block;
+}
+.main h2{
+    padding: 1em;
+    background-color: blue;
+    size: 20px;
+    display: inline-block;
+}
+
+h3{
+    padding: 1em;
+    background-color: blue;
+    size: 16px;
+    display: inline-block;
+}
+
+h4{
+    padding: 1em;
+    size: 20px;
+    display: inline-block;
+}
+
+h5{
+    padding: 1em;
+    size: 20px;
+    display: inline-block;
+    background-color: blue;
+}
+.positiveNegative {
+    max-width: 1000;
+}
+.positive {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: rgb(79, 151, 8);
+    display: inline-block;
+    size: 24px;
+    display: inline-block;
+}
+
+.negative {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: red;
+    display: inline-block;
+    size: 24px;
+    display: inline-block;
+}

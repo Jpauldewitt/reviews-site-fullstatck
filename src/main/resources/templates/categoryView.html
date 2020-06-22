@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link th:href="@{/css/category.css}" rel="stylesheet" type="text/css"/>
+
+    <title th:text ="'Jesse Reviews: '+${category.toString()}"></title>
+</head>
+<div class="grid-container">
+    <header>
+        <div class="navbar">
+        </div>
+    </header>
+    <body>
+        <div class="title">
+            <h1>Jesse's Random Review Site:</h1>
+            <h2>List of reviews:</h2>
+        </div>
+        <div class="main">
+            <ul>
+                <li th:each="review:${category.reviews}">
+                    <a th:href="@{'/reviews/'+ ${review.id}}"
+                       th:text="${review.item}">
+                    </a>
+                </li>
+            </ul>
+            <a th:href="'/categories'"
+               th:text="'Back to Home'">
+            </a>
+         </div>
+    </body>
+        <div class="footer">
+            <small>& copy Jesse DeWitt 2020</small>
+        </div>
+</div>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link th:href="@{/css/reviews.css}" rel="stylesheet" type="text/css"/>
+    <title th:text ="'Jesse Reviews: '+${review.item}"></title>
+</head>
+<div class="grid-container">
+        <div class="navbar">
+             navbar here
+        </div>
+    <body>
+        <div class="title">
+            <h1>Jesse's Random Review Site:</h1>
+        </div>
+        <div class="main">
+            <h2 th:text="${review.item}"></h2>
+            <h3 th:text="'Category'+ ${review.category.toString()}"></h3>
+            <h5 th:each="subcategory: ${review.subCategories}
+                "th:text="${subcategory.subCategoryName}">
+            </h5>
+            <img th:src="${review.getImageUrl()}" />
+        <div class="positiveNegative">
+            <div class="positive">
+                <h4 th:text="${review.getPositives()}"></h4>
+            </div>
+             <div class="negative">
+                <h4 th:text="${review.getNegatives()}"></h4>
+            </div>
+        </div>
+        <div class="description">
+             <p th:text="${review.getDescription()}"></p>
+        </div>
+        <div class="reviews">
+            <p th:text="${review.getReviewSection()}"></p>
+        </div>
+    </body>
+        <div class="footer">
+            <a th:href="'/categories/'+${review.category.categoryName}"
+                th:text="'Back to Category: ' + ${review.category.toString()}">
+             </a>
+            <small>& copy Jesse DeWitt 2020</small>
+         </div>
+</div>
+</html>

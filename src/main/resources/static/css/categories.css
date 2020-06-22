@@ -1,0 +1,30 @@
+html {
+    margin: 0 auto;
+    max-width: 1000px;
+    margin-top: 1em;
+    font-family: "Courier New", Courier, monospace;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.7fr 2.3fr 0.5fr;
+    gap: 1px 1px;
+    grid-template-areas: "navbar navbar" "title title" "main main" "footer footer";
+}
+
+.navbar {
+    grid-area: navbar;
+}
+
+.title {
+    grid-area: title;
+}
+
+.main {
+    grid-area: main;
+    margin-left: 2em;
+}
+
+.footer {
+    grid-area: footer;
+}
